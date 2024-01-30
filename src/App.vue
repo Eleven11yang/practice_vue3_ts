@@ -1,22 +1,16 @@
 <template>
   <!-- 结构 -->
-  <div class="app">
-    <h1>你好</h1>
-  </div>
+  <!-- vue3中可以写多个根标签 -->
+  <Person />
+  <Car />
 </template>
 
 <script lang="ts">
-// ts / js
+import Person from "./components/Person.vue";
+import Car from "./components/Car.vue";
+
 export default {
-  name: "App",
+  name: "App", //组件名字
+  components: { Person, Car }, //注册组件
 };
 </script>
-
-<style scoped>
-.app {
-  background-color: #ddd;
-  box-shadow: 0 0 10px;
-  border-radius: 10px;
-  padding: 20px;
-}
-</style>
